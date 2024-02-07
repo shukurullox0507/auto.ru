@@ -1,7 +1,13 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Container, Grid, Card, CardContent, Typography, CircularProgress } from '@mui/material';
+import {
+    Container,
+    Grid,
+    CardContent,
+    Typography,
+    CircularProgress
+} from '@mui/material';
 import Image from 'next/image';
 
 interface Car {

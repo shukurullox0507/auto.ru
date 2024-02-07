@@ -71,7 +71,7 @@ export default function LanguagePopover() {
                         ),
                     }}
                 >
-                    <Image width="28" src={LANGS[language].icon} alt={LANGS[language].label} />
+                    <Image width="28" height={"28"} src={LANGS[language].icon} alt={LANGS[language].label} />
                 </IconButton>
             </Tooltip>
 

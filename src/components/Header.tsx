@@ -1,9 +1,16 @@
 'use client'
 import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, InputBase, Button, Drawer, List, ListItem, ListItemText, MenuItem, Menu } from '@mui/material';
+import {
+    AppBar,
+    Toolbar,
+    IconButton,
+    InputBase,
+    Button,
+    MenuItem,
+    Menu
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import MapsUgcRoundedIcon from '@mui/icons-material/MapsUgcRounded';
@@ -13,10 +20,9 @@ import { useTranslation } from 'react-i18next';
 import LanguagePopover from './LanguagePopover';
 
 const Header: React.FC = () => {
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [isHovering, setIsHovering] = useState(false);
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     const open = Boolean(anchorEl);
     const handleMenuClose = () => {
@@ -110,7 +116,7 @@ const Header: React.FC = () => {
                                 <SearchIcon style={{ color: "#787879FF" }} />
                             </div>
                             <InputBase
-                                placeholder= {t('searchBox')}
+                                placeholder={t('searchBox')}
                                 fullWidth
                                 style={{ color: "#787879FF" }} />
                         </div>
@@ -191,7 +197,7 @@ const Header: React.FC = () => {
                             }}>
                             {t('post')}
                         </Button>
-                        <LanguagePopover/>
+                        <LanguagePopover />
                     </div>
                 </Toolbar>
                 <Toolbar
@@ -210,7 +216,7 @@ const Header: React.FC = () => {
                         }}>
                         <Link href="" style={{ cursor: 'pointer' }}>
                             {t('cars')}
-                            </Link>
+                        </Link>
                         <Link href="" style={{ cursor: 'pointer' }}>
                             {t('commercial')}
                         </Link>
