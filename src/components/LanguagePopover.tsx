@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Box, IconButton, MenuItem, Popover, Stack, Tooltip } from '@mui/material';
 import { alpha } from '@mui/material/styles';
 import i18n from '../language/i18next';
+import Image from 'next/image';
 
 enum LangValue {
     Uz = 'uz',
@@ -70,7 +71,7 @@ export default function LanguagePopover() {
                         ),
                     }}
                 >
-                    <img width="28" src={LANGS[language].icon} alt={LANGS[language].label} />
+                    <Image width="28" src={LANGS[language].icon} alt={LANGS[language].label} />
                 </IconButton>
             </Tooltip>
 
