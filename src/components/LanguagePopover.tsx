@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box, IconButton, MenuItem, Popover, Stack, Tooltip } from '@mui/material';
@@ -36,9 +35,10 @@ const LANGS: Record<LangValue, ILangs> = {
     },
 };
 
+
 export default function LanguagePopover() {
     const [open, setOpen] = useState(null);
-    const storedLanguage = localStorage.getItem('lang');
+    const storedLanguage = typeof window !== 'undefined' ? window.localStorage.getItem('lang') : null;
     const [language, setLanguage] = useState<LangValue>(storedLanguage as LangValue || LangValue.Ru);
     const { t } = useTranslation();
 
